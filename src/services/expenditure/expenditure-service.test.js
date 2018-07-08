@@ -10,7 +10,7 @@ describe('expenditureService', () => {
     HttpService.remove.mockReset()
   })
 
-  describe('getAllexpenditures', () => {
+  describe('getAllExpenditures', () => {
     it('gets all expenditures', () => {
       const endpoint = '/expenditures/get'
       const body = {
@@ -21,7 +21,7 @@ describe('expenditureService', () => {
 
       HttpService.post.mockReturnValue(Promise.resolve(response))
 
-      return expenditureService.getAllexpenditures({ selectFields: body.selectFields })
+      return expenditureService.getAllExpenditures({ selectFields: body.selectFields })
       .then(res => {
         expect(res).toEqual(response)
         expect(HttpService.post).toHaveBeenCalledWith({ endpoint, body })
@@ -29,7 +29,7 @@ describe('expenditureService', () => {
     })
   })
 
-  describe('getexpendituresByUserId', () => {
+  describe('getExpendituresByUserId', () => {
     it('gets all expenditures for a given userId', () => {
       const endpoint = '/expenditures/get'
       const body = {
@@ -40,7 +40,7 @@ describe('expenditureService', () => {
 
       HttpService.post.mockReturnValue(Promise.resolve(response))
 
-      return expenditureService.getexpendituresByUserId({ userId: body.userId, selectFields: body.selectFields })
+      return expenditureService.getExpendituresByUserId({ userId: body.userId, selectFields: body.selectFields })
       .then(res => {
         expect(res).toEqual(response)
         expect(HttpService.post).toHaveBeenCalledWith({ endpoint, body })
@@ -48,7 +48,7 @@ describe('expenditureService', () => {
     })
   })
 
-  describe('getexpenditureByexpenditureId', () => {
+  describe('getExpenditureByExpenditureId', () => {
     it('gets expenditure data for given expenditureId', () => {
       const endpoint = '/expenditures/get'
       const body = {
@@ -59,7 +59,7 @@ describe('expenditureService', () => {
 
       HttpService.post.mockReturnValue(Promise.resolve(response))
 
-      return expenditureService.getexpenditureByexpenditureId({ expenditureId: body.expenditureId, selectFields: body.selectFields })
+      return expenditureService.getExpenditureByExpenditureId({ expenditureId: body.expenditureId, selectFields: body.selectFields })
       .then(res => {
         expect(res).toEqual(response)
         expect(HttpService.post).toHaveBeenCalledWith({ endpoint, body })
@@ -67,7 +67,7 @@ describe('expenditureService', () => {
     })
   })
 
-  describe('createexpenditure', () => {
+  describe('createExpenditure', () => {
     it('creates an expenditure for a given user', () => {
       const endpoint = '/expenditures/create'
       const body = {
@@ -78,7 +78,7 @@ describe('expenditureService', () => {
 
       HttpService.post.mockReturnValue(Promise.resolve(response))
 
-      return expenditureService.createexpenditure({ userId: body.userId, expenditureData: body.expenditureData })
+      return expenditureService.createExpenditure({ userId: body.userId, expenditureData: body.expenditureData })
       .then(res => {
         expect(res).toEqual(response)
         expect(HttpService.post).toHaveBeenCalledWith({ endpoint, body })
@@ -86,7 +86,7 @@ describe('expenditureService', () => {
     })
   })
 
-  describe('deleteexpenditure', () => {
+  describe('deleteExpenditure', () => {
     it('deletes an expenditure for a given expenditureId', () => {
       const endpoint = '/expenditures/delete'
       const body = {
@@ -96,7 +96,7 @@ describe('expenditureService', () => {
 
       HttpService.remove.mockReturnValue(Promise.resolve(response))
 
-      return expenditureService.deleteexpenditure({ expenditureId: body.expenditureId })
+      return expenditureService.deleteExpenditure({ expenditureId: body.expenditureId })
       .then(res => {
         expect(res).toEqual(response)
         expect(HttpService.remove).toHaveBeenCalledWith({ endpoint, body })
@@ -104,7 +104,7 @@ describe('expenditureService', () => {
     })
   })
 
-  describe('editexpenditure', () => {
+  describe('editExpenditure', () => {
     it('deletes an expenditure for a given expenditureId', () => {
       const endpoint = '/expenditures/edit'
       const body = {
@@ -115,7 +115,7 @@ describe('expenditureService', () => {
 
       HttpService.put.mockReturnValue(Promise.resolve(response))
 
-      return expenditureService.editexpenditure({ expenditureId: body.expenditureId, updateMap: body.updateMap })
+      return expenditureService.editExpenditure({ expenditureId: body.expenditureId, updateMap: body.updateMap })
       .then(res => {
         expect(res).toEqual(response)
         expect(HttpService.put).toHaveBeenCalledWith({ endpoint, body })

@@ -9,7 +9,7 @@ A single-page application for tracking a company's expenditures. Built with the 
 * Summary reports available with expenditures per week, including total spending per week and avergage daily spending
 * Expenditure tables allows filtering and sorting per column
 * Independent REST API can be used by any app, such as Postman
-* Unit tests for the UI services
+* Unit tests for the UI services `yarn test`
 
 ### Technology used
 
@@ -23,3 +23,4 @@ A single-page application for tracking a company's expenditures. Built with the 
 1) Start the PostgreSQL database
 2) `node api/index.js` for the API
 3) `yarn start` for the UI
+4) `yarn test` for the unit tests
