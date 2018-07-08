@@ -1,0 +1,57 @@
+.expenditure-report-component {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+
+.expenditure-report-component .main-frame {
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 0 0 200px 200px rgba(0, 0, 0, .75);
+}
+
+.expenditure-report-component .title-row h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.expenditure-report-component .title-row .btn.close {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+.expenditure-report-component .table-header-row {
+  margin-bottom: 15px;
+}
+
+.expenditure-report-component .display-field label {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.expenditure-report-component .display-field span {
+  font-size: 18px;
+  font-weight: normal;
+  display: block;
+  line-height: 1.2;
+}
+
+@media print {
+  #expenditure-report-component {
+    
+  }
+}
