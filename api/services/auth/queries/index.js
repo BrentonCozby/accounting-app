@@ -1,4 +1,3 @@
-const bcrypt = require('bcrypt')
 const { query } = require('../../../../database/index.js')
 const { sanitize, camelCaseMapKeys } = require('@utils/index.js')
 

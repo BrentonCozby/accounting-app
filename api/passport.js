@@ -1,4 +1,3 @@
-const jwt = require('jsonwebtoken')
 const passport = require("passport")
 const passportJWT = require("passport-jwt")
 const ExtractJwt = passportJWT.ExtractJwt

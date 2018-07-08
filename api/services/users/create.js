@@ -1,6 +1,5 @@
 const router = require('express-promise-router')()
-const { passport } = require('@root/passport.js')
-const { verifyOneOfRolesMiddleware, validateRequiredParams } = require('@utils/index.js')
+const { validateRequiredParams } = require('@utils/index.js')
 const queries = require('./queries/index.js')
 const santizeHtml = require('sanitize-html')
 
