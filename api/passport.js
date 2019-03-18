@@ -1,14 +1,15 @@
 const passport = require("passport")
 const passportJWT = require("passport-jwt")
+const path = require('path')
 const ExtractJwt = passportJWT.ExtractJwt
 const JwtStrategy = passportJWT.Strategy
 const { getUserByUserId } = require('@services/users/queries/index.js')
 
-require('dotenv').config({ path: '../api.env' })
+require('dotenv').config({ path: path.resolve('api.env') })
 
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-  secretOrKey: new Buffer(process.env.JWT_SECRET, 'base64')
+  secretOrKey: new Buffer.from(process.env.JWT_SECRET, 'base64')
 }
 
 const strategy = new JwtStrategy(jwtOptions, async function(jwtPayload, next) {
